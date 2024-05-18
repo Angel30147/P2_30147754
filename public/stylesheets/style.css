@@ -268,3 +268,20 @@
         grid-template-columns: repeat(1, 1fr);
     }
   }
+
+
+  label{
+    color: white;
+  }
+
+  input,textarea,button{
+    margin:.4rem;
+  }
+
+  button {
+    width: 29%;
+    padding: .3rem;
+    cursor: pointer;
+  }
+
+  
