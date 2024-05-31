@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href='../stylesheets/style.css'>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
 </head>
 <body>
 
@@ -262,17 +264,20 @@
                 <label for="">
                     Nombre
                 </label><br>
-                <input type="text" name="name" required>
+                <input type="text" name="name">
                 <label for=""><br>
                     Correo
                 </label><br>
-                <input type="email" name="email" required>
+                <input type="text" name="email">
                 <label for=""><br>
                     Comentario
                 </label><br>
-                <textarea name="commentary" id="" required>
+                <textarea name="commentary" id="">
     
                 </textarea><br>
+                <div class="form-group">
+                    <div class="g-recaptcha" data-sitekey="<%= publicKey %>"></div>
+                </div>
                 <button>Enviar</button>
             </form>
             
