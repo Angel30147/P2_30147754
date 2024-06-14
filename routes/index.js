@@ -48,7 +48,7 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'Angel Jose Castro Ramirez CV', publicKey: process.env.PUBLICKEY });
 });
 
-router.post('/login', Auth.protectRouteLogOut, async (req, res, next) => {
+router.post('/login', async (req, res, next) => {
 
   const { email, contraseña } = req.body;
   if (email == process.env.USER && contraseña == process.env.PASS) {
@@ -62,7 +62,7 @@ router.post('/login', Auth.protectRouteLogOut, async (req, res, next) => {
 })
 
 
-router.get('/login',(req,res,next) => {
+router.get('/login', Auth.protectRouteLogOut, (req,res,next) => {
   res.render('login')
 })
 
